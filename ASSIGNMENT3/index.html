@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Maker</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Pizza Maker</h1>
+        <form id="pizzaForm">
+            <div class="form-group">
+                <h2 class="category-heading">Serving Options:</h2>
+                <div class="sub-category">
+                    <h3 class="sub-heading" >Select Crust:</h3>
+                    <div class="checkbox-group">
+                        <input type="radio" id="original" name="crust" value="Original Hand Tossed" required>
+                        <label for="original">Original Hand Tossed</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="radio" id="thin" name="crust" value="Hand Tossed Thin" required>
+                        <label for="thin">Hand Tossed Thin</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="radio" id="crunchy" name="crust" value="Crunchy Thin Crust" required>
+                        <label for="crunchy">Crunchy Thin Crust</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="radio" id="pan" name="crust" value="Handmade Pan" required>
+                        <label for="pan">Handmade Pan</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="radio" id="gluten-free" name="crust" value="Gluten free crust" required>
+                        <label for="gluten-free">Gluten free crust</label>
+                    </div>
+                </div>
+                <div class="sub-category">
+                    <h3 class="sub-heading">Select Size:</h3>
+                    <select id="size" name="size" class="select-field" required>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                </div>
+                <div class="sub-category">
+                    <h3 class="sub-heading">Select Quantity:</h3>
+                    <input type="number" id="quantity" name="quantity" min="1" class="select-field" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <h2 class="category-heading">Different Types of Sauces:</h2>
+                <select id="sauce" name="sauce" class="select-field" required>
+                    <option value="tomato">Tomato Sauce</option>
+                    <option value="bbq">BBQ Sauce</option>
+                    <option value="white">White Sauce</option>
+                    <option value="garlic">Garlic Sauce</option>
+                    <option value="ranch">Ranch Sauce</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <h2 class="category-heading">Cheese Options:</h2>
+                <div class="sub-category">
+                    <h3 class="sub-heading">Cheese:</h3>
+                    <select id="cheese" name="cheese" class="select-field" required>
+                        <option value="normal">Normal</option>
+                        <option value="extra">Extra</option>
+                        <option value="double">Double</option>
+                        <option value="triple">Triple</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <h2 class="category-heading">Meats and Veggies Options:</h2>
+                <div class="sub-category" >
+                    <h3 class="sub-heading">Meats:</h3>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="sausage" name="meat" value="Sausage" >
+                        <label for="sausage">Sausage</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="ham" name="meat" value="Ham" >
+                        <label for="ham">Ham</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="bacon" name="meat" value="Bacon" >
+                        <label for="bacon">Bacon</label>
+                    </div>
+                </div>
+                <div class="sub-category">
+                    <h3 class="sub-heading">Veggies:</h3>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="mushrooms" name="veggie" value="Mushrooms" >
+                        <label for="mushrooms">Mushrooms</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="onions" name="veggie" value="Onions" >
+                        <label for="onions">Onions</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="bell-peppers" name="veggie" value="Bell Peppers" >
+                        <label for="bell-peppers">Bell Peppers</label>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="order-button">Order</button>
+        </form>
+        <p id="studentInfo" class="student-info"></p>
+        <div id="pizzaOutput" class="pizza-output"></div>
+    </div>
+</body>
+</html>
